@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Family Run 2026 — Inscrição</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="topbar">Inscrições abertas · vagas limitadas</div>
+
+  <div class="page">
+
+    <div class="intro">
+      <img src="assets/family-run-logo.jpeg" alt="Family Run — Corrida e Caminhada — 1K 3K 5K 10K" class="logo" />
+      <p class="intro-text">
+        A <strong>RA Fisioterapia</strong> convida você e sua família para a corrida e caminhada que celebra o fim de 2026.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-icon">🗓️</span>
+        <div class="info-text">
+          <span class="info-title">28 de novembro de 2026</span>
+          <span class="info-sub">Concentração 06:00 · largada 06:30</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div class="info-text">
+          <span class="info-title">Avenida Boa Viagem</span>
+          <span class="info-sub">Recife · ponto de encontro no local</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🎟️</span>
+        <div class="info-text">
+          <span class="info-title">Evento gratuito</span>
+          <span class="info-sub">Para convidados e familiares</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="form" class="card" novalidate>
+      <div class="card-head">
+        <h2>Confirme sua participação</h2>
+        <p class="muted">Leva menos de um minuto.</p>
+      </div>
+
+      <label class="field">
+        <span class="field-label">Nome completo</span>
+        <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como está no documento" />
+      </label>
+
+      <label class="field">
+        <span class="field-label">Data de nascimento</span>
+        <input type="date" id="nascimento" name="nascimento" />
+      </label>
+
+      <div class="field">
+        <span class="field-label">Distância pretendida</span>
+        <div class="chip-grid chip-grid-4" id="distancia-group" role="group" aria-label="Distância pretendida">
+          <button type="button" class="chip" data-value="1K">1K</button>
+          <button type="button" class="chip" data-value="3K">3K</button>
+          <button type="button" class="chip" data-value="5K">5K</button>
+          <button type="button" class="chip" data-value="10K">10K</button>
+        </div>
+        <span class="hint">1K e 3K são ideais para crianças e caminhada.</span>
+      </div>
+
+      <label class="field">
+        <span class="field-label">Telefone / WhatsApp</span>
+        <input type="tel" id="telefone" name="telefone" inputmode="tel" placeholder="(81) 90000-0000" />
+      </label>
+
+      <label class="field">
+        <span class="field-label">E-mail</span>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com" />
+      </label>
+
+      <div class="field">
+        <span class="field-label">Tamanho da camisa</span>
+        <div class="chip-grid chip-grid-3" id="tamanho-group" role="group" aria-label="Tamanho da camisa">
+          <button type="button" class="chip" data-value="PP">PP</button>
+          <button type="button" class="chip" data-value="P">P</button>
+          <button type="button" class="chip" data-value="M">M</button>
+          <button type="button" class="chip" data-value="G">G</button>
+          <button type="button" class="chip" data-value="GG">GG</button>
+          <button type="button" class="chip" data-value="XG">XG</button>
+        </div>
+      </div>
+
+      <div id="erro" class="error hidden"></div>
+
+      <button type="submit" id="submit-btn" class="submit-btn">Garantir minha vaga</button>
+      <p class="fineprint">Seus dados são usados apenas para a organização do evento.</p>
+    </form>
+
+    <div id="success" class="card success hidden">
+      <div class="check">✓</div>
+      <h2>Inscrição confirmada!</h2>
+      <p id="resumo" class="resumo"></p>
+      <p class="muted">Enviamos os detalhes para o seu e-mail. Chegue às 06:00 na Avenida Boa Viagem.</p>
+      <button type="button" id="nova-inscricao" class="secondary-btn">Inscrever outra pessoa</button>
+    </div>
+
+    <p class="footer">RA Fisio · Family Run 2026</p>
+  </div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
