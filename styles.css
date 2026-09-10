@@ -161,6 +161,10 @@ input:focus, select:focus {
   border-radius: 10px;
   background: var(--input-bg);
   color: var(--ink);
+  /* ponytail: iOS dá largura intrínseca ao input[type=date] e estoura o container */
+  min-width: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .chip-grid { display: grid; gap: 8px; margin-top: 2px; }
