@@ -51,7 +51,11 @@ Leva uns 5 minutos e não precisa de servidor nenhum.
    de teste e confirme que uma linha nova apareceu na aba **Inscrições**
    da planilha, com as colunas:
 
-   `Data/hora | Nome completo | Data de nascimento | Distância | Telefone | E-mail | Tamanho da camisa`
+   `Data/hora | Nome completo | Data de nascimento | Distância | Telefone | E-mail | Tamanho da camisa | Profissão`
+
+   Colunas novas sempre entram **no fim** dessa lista, e o script
+   escreve o título que estiver faltando na primeira vez que rodar —
+   assim as linhas já gravadas continuam alinhadas com os títulos.
 
 ## Atualizando o script depois
 
