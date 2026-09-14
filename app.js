@@ -10,6 +10,7 @@
 
   const nomeInput = document.getElementById("nome");
   const nascimentoInput = document.getElementById("nascimento");
+  const profissaoInput = document.getElementById("profissao");
   const telefoneInput = document.getElementById("telefone");
   const emailInput = document.getElementById("email");
 
@@ -90,6 +91,7 @@
 
     const nome = nomeInput.value.trim();
     const nascimento = nascimentoInput.value;
+    const profissao = profissaoInput.value.trim();
     const email = emailInput.value.trim();
     const telefoneDigits = telefoneInput.value.replace(/\D/g, "");
 
@@ -108,6 +110,7 @@
       await enviarParaPlanilha({
         nome,
         nascimento,
+        profissao,
         distancia,
         telefone: telefoneInput.value,
         email,
